@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><%= wedding.couple %> — Wedding Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:wght@300;400;600&family=Moul&family=Moulpali&family=UnifrakturCook:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <div id="bubble-layer" aria-hidden="true"></div>
+
+    <main class="page">
+      <section class="card" role="article" aria-label="Wedding invitation">
+        <div class="top-ornament" aria-hidden="true"></div>
+
+        <p class="guest-line">
+          Dear <span class="guest-name"><%= guestName %></span>,
+        </p>
+
+        <h1 class="couple"><%= wedding.couple %></h1>
+        <p class="tagline"><%= wedding.tagline %></p>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="details">
+          <div class="detail">
+            <div class="label">ធ្វើនៅ</div>
+            <div class="value"><%= wedding.dateLine %></div>
+          </div>
+
+          <div class="detail">
+            <div class="label">វេលាម៉ោង</div>
+            <div class="value"><%= wedding.timeLine %></div>
+          </div>
+
+          <div class="detail">
+            <div class="label">ហាង</div>
+            <div class="value"><%= wedding.venueLine %></div>
+            <div class="value sub"><%= wedding.addressLine %></div>
+          </div>
+
+          <div class="detail">
+            <div class="label">ហែជំនូន</div>
+            <div class="value"><%= wedding.dressCode %></div>
+          </div>
+        </div>
+
+        <blockquote class="quote">
+          <%= wedding.quote %>
+        </blockquote>
+
+        <p class="footer-note">
+          Your invitation code: <span class="code"><%= guestSlug %></span>
+        </p>
+
+        <div class="bottom-ornament" aria-hidden="true"></div>
+      </section>
+
+      <!-- Book Invitation (above photos) -->
+<section class="book-invite reveal" aria-label="Invitation Book">
+  <section class="book" aria-label="Invitation Card">
+    <div class="panes">
+
+      <!-- LEFT: KHMER -->
+      <article class="pane khmer" lang="km">
+        <div class="frame">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner br"></span><span class="corner bl"></span>
+          <div class="side-flourish left"><div class="line"></div></div>
+
+          <div class="content moul-regular">
+            <div class="kh-parents">
+              <div class="left"></div>
+              <div class="mid"></div>
+              <div class="right"></div>
+            </div>
+
+            <div class="book-divider"></div>
+
+            <div class="kh-title">មានកិត្តិយសសូមគោរពអញ្ជើញ</div>
+
+            <div class="kh-body">
+              ឯកឧត្តម លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា
+              អញ្ជើញចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយសដើម្បីប្រសិទ្ធិពរជ័យ សិរីសួស្ដីជ័យមង្គល ដល់គូរស្វាមីភរិយាថ្មី ក្នុងពិធីអាពាហ៍ពិពាហ៍
+              របស់កូនប្រុសកូនស្រីរបស់យើងខ្ញុំ។
+            </div>
+
+            <div class="seal" aria-label="Monogram">
+              <div class="crown">♛</div>
+              <div class="mono">ញក</div>
+            </div>
+
+            <div class="kh-couple" aria-label="Couple Names">
+              <div class="col" style="text-align:left; padding-left:6px;">
+                <div class="label">កូនប្រុស</div>
+                <div class="name">ស៊ុន ហេងសុខបញ្ញា</div>
+              </div>
+
+              <div class="center">
+                <div class="heart" aria-hidden="true"></div>
+                <div style="font-size:16px;">ជាគូនឹង</div>
+              </div>
+
+              <div class="col" style="text-align:right; padding-right:6px;">
+                <div class="label">កូនស្រី</div>
+                <div class="name">វង្ស ម៉ាលីកា</div>
+              </div>
+            </div>
+
+            <div class="kh-bottom">
+              ថ្ងៃអាទិត្យ ទី០១ ខែមីនា ឆ្នាំ២០២៦ <br/>
+              ម៉ោង ៥:០០ ល្ងាច <br/>
+              ភោជនីយដ្ឋាន សមភាពថ្មី (B) ក្រុងសៀមរាប
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RIGHT: ENGLISH -->
+      <article class="pane english" lang="en">
+        <div class="frame">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner br"></span><span class="corner bl"></span>
+          <div class="side-flourish right"><div class="line"></div></div>
+
+          <div class="content unifrakturcook-bold">
+            <div class="en-parents">
+              <div class="left block"></div>
+              <div class="right block"></div>
+            </div>
+
+            <div class="book-divider"></div>
+
+            <div class="en-title">Wedding Invitation</div>
+
+            <div class="en-request">
+              Cordially request the honor of your presence <br/>
+              on the auspicious occasion of the wedding of our children
+            </div>
+
+            <div class="seal" aria-label="Monogram">
+              <div class="crown">♛</div>
+              <div class="mono">NK</div>
+            </div>
+
+            <div class="names">
+              <div class="col" style="text-align:left; padding-left:6px;">
+                <div class="label">Groom’s</div>
+                <div class="person">Sun Hengsokpanha</div>
+              </div>
+
+              <div class="love" aria-label="Love">
+                <div class="heart" aria-hidden="true"></div>
+                <div style="font-size:20px;">In Love</div>
+              </div>
+
+              <div class="col" style="text-align:right; padding-right:6px;">
+                <div class="label">Bride’s</div>
+                <div class="person">Vong Malyka</div>
+              </div>
+            </div>
+
+            <div class="book-details">
+              <div>On Sunday 01<sup>th</sup> March 2026</div>
+              <div>At 5:00 PM</div>
+              <div>At the Sompheap Thmey (B) Restaurant</div>
+              <div>Siem Reap City, Siem Reap Province</div>
+            </div>
+
+            <div class="note"></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</section>
+
+
+      <!-- Button ABOVE the photo album -->
+      <div class="rsvp album-btn-row">
+        <button class="btn btn-khmer" type="button" id="openKhmerCard">សូមមេត្តាចុចទីនេះដើម្បីមើលលិខិតអញ្ជើញលើកជំនូន</button>
+      </div>
+
+      <!-- Khmer Traditional Schedule (above photos) -->
+<section class="trad-schedule reveal" aria-label="Khmer traditional schedule">
+  <div class="trad-page">
+    <div class="trad-border">
+
+      <div class="trad-header">
+        <div class="trad-emblem"></div>
+        <h1 class="trad-title moul-regular">
+          កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍
+        </h1>
+      </div>
+
+      <div class="trad-content moul-regular">
+        <p>ថ្ងៃសៅរិ៍ ទី២៨ ខែកុម្ភៈ ឆ្នាំ២០២៦</p>
+
+        <div class="trad-schedule-list">
+          <p><span>ម៉ោង ០២:០០</span> ៖ ពិធីសែនក្រុងពាលី</p>
+          <p><span>ម៉ោង ០៣:០០</span> ៖ ពិធីកាត់សក់បង្កក់សេរី</p>
+          <p><span>ម៉ោង ៤:៣០</span> ៖ ពិធីសូត្រមន្តចំរើនព្រះបរិត្ត</p>
+          <p><span>ម៉ោង ៥:០០</span> ៖ ពិធីជាវខាន់ស្លា</p>
+          <p><span>ម៉ោង ៦:០០</span> ៖ អញ្ជើញភ្ងៀវកិត្តិយសពិសាអាហារ</p>
+        </div>
+      </div>
+
+      <div class="trad-content moul-regular">
+        <p>ថ្ងៃអាទិត្យ ទី១ ខែមីនា ឆ្នាំ២០២៦</p>
+
+        <div class="trad-schedule-list">
+          <p><span>ម៉ោង ០៥:៣០</span> ៖ ពិធីសំពះព្រះអាទិត្យ</p>
+          <p><span>ម៉ោង ៦:៣០</span> ៖ ជួបជុំភ្ងៀវកិត្តិយសរៀបចំហែជំនូន</p>
+          <p><span>ម៉ោង ៧:០០</span> ៖ ពិធីហែរជំនូនចូលរោងជ័យ</p>
+          <p><span>ម៉ោង ៨:០០</span> ៖ អញ្ជើញភ្ងៀវ ពិសាអាហារពេលព្រឹក</p>
+          <p><span>ម៉ោង ៩:៣០</span> ៖ ពិធីសែនកុងម៉ា</p>
+          <p><span>ម៉ោង ១០:៣០</span> ៖ ពិធីបង្វិលពពិល សំពះផ្ទឹម សែនចងដៃ</p>
+          <p><span>ម៉ោង ១១:០០</span> ៖ អញ្ជើញភ្ងៀវពិសាភោជនីយអាហារថ្ងៃត្រង់</p>
+          <p><span>ម៉ោង ១៧:០០</span> ៖ ពិធីសែនកុងម៉ា</p>
+        </div>
+      </div>
+
+      <div class="trad-footer moul-regular">
+        សូមអញ្ជើញភ្ញៀវកិត្តិយសទាំងអស់ចូលរួម
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <!-- Photo Album (scroll down) -->
+      <section class="album" aria-label="Photo album">
+        <h2 class="album-title reveal">Our Moments</h2>
+
+        <div class="album-grid">
+          <!-- 1 - 9: big modern frames, in order -->
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/1.jpg" alt="Photo 1" loading="lazy" />
+              <figcaption class="photo-caption">Love of my life</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/2.jpg" alt="Photo 2" loading="lazy" />
+              <figcaption class="photo-caption">Nothing Gonna Change My Love For You</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/3.jpg" alt="Photo 3" loading="lazy" />
+              <figcaption class="photo-caption">Our happiness came from within</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/4.jpg" alt="Photo 4" loading="lazy" />
+              <figcaption class="photo-caption">Life without joy is like wine without anyone to drink</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/5.jpg" alt="Photo 5" loading="lazy" />
+              <figcaption class="photo-caption">Enjoy every blink of an eyes since no one know what will happen next moment</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/6.jpg" alt="Photo 6" loading="lazy" />
+              <figcaption class="photo-caption">My wife , my love , my life , my pride</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/7.jpg" alt="Photo 7" loading="lazy" />
+              <figcaption class="photo-caption">Words can't express how much you meant to me</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/8.jpg" alt="Photo 8" loading="lazy" />
+              <figcaption class="photo-caption">Last life , This life , Next life , we'll meet</figcaption>
+            </figure>
+          </div>
+
+          <div class="photo-item reveal">
+            <figure class="photo-frame">
+              <img src="/photos/9.jpg" alt="Photo 9" loading="lazy" />
+              <figcaption class="photo-caption">I love you my wifey</figcaption>
+            </figure>
+          </div>
+
+          <!-- 10: biggest, full width (landscape) -->
+          <div class="photo-item photo-wide reveal">
+            <figure class="photo-frame photo-frame-wide">
+              <img src="/photos/10.jpg" alt="Photo 10" loading="lazy" />
+              <figcaption class="photo-caption">Our Story</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Khmer Invitation Modal -->
+    <div class="kmodal" id="khmerModal" aria-hidden="true" role="dialog" aria-label="Khmer invitation">
+      <div class="kmodal-backdrop" data-close="true"></div>
+
+      <div class="kmodal-panel" role="document">
+        <button class="kmodal-close" type="button" aria-label="Close" id="closeKhmerCard">✕</button>
+
+        <div class="kcard-wrap">
+          <div class="kcard">
+            <div class="kinner">
+
+              <div class="kornament">
+                <svg viewBox="0 0 900 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M130 90c70-60 130-55 190 5 50 50 110 50 160 0 60-60 120-65 190-5"
+                        stroke="var(--kgold)" stroke-width="10" stroke-linecap="round"/>
+                  <path d="M450 22c-22 0-40 18-40 40s18 40 40 40 40-18 40-40-18-40-40-40Z"
+                        stroke="var(--kgold)" stroke-width="8"/>
+                  <path d="M60 102c40-8 68-28 86-56M840 102c-40-8-68-28-86-56"
+                        stroke="var(--kgold)" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M40 110c34 0 62 10 82 30M860 110c-34 0-62 10-82 30"
+                        stroke="var(--kgold)" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <h1 class="ktitle">លិខិតអញ្ជើញលើកជំនូន</h1>
+
+              <div class="ktext">
+                <p>ឯកឧត្តម លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា</p>
+                <p>
+                  ថ្ងៃអាទិត្យ ទី០១ ខែមីនា ឆ្នាំ២០២៦ ម៉ោង ៦:៣០ ព្រឹក នៅគេហដ្ឋានកូនក្រមុំដែលមានទីតាំងស្ថិតនៅភូមិកក្រាញ់
+                  សង្កាត់សៀមរាប ក្រុងសៀមរាប (ចុះពីស្ថានក្រវ៉ាត់ក្រុង ចំងាយ១៦០ម៉ែត្រ)
+                </p>
+                <p>សូមអញ្ជើញ Scan QR សម្រាប់ទីតាំង Google Map</p>
+              </div>
+
+              <div class="kfooter-row">
+                <div class="knote">
+                  <div><strong>សូមអរគុណ!</strong></div>
+                  <div>ទំនាក់ទំនង(កូនកំលោះ)៖ ០១២ ២៧៤ ២៤៤</div>
+                  <div>ទំនាក់ទំនង(កូនក្រមុំ)៖ ០៩២ ៣០៧ ៤២៨</div>
+                </div>
+
+                <div class="kqr" id="qrcode" title="Scan me"></div>
+              </div>
+
+              <div class="kornament kbottom">
+                <svg viewBox="0 0 900 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M130 50c70 60 130 55 190-5 50-50 110-50 160 0 60 60 120 65 190 5"
+                        stroke="var(--kgold)" stroke-width="10" stroke-linecap="round"/>
+                  <path d="M450 118c-22 0-40-18-40-40s18-40 40-40 40 18 40 40-18 40-40 40Z"
+                        stroke="var(--kgold)" stroke-width="8"/>
+                  <path d="M60 38c40 8 68 28 86 56M840 38c-40 8-68 28-86 56"
+                        stroke="var(--kgold)" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QRCode library MUST be before /script.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
