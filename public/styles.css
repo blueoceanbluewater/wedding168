@@ -546,6 +546,9 @@ body::before{
   width: min(1100px, 100%);
   margin-top: 14px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* match your gold theme */
@@ -892,4 +895,19 @@ body::before{
   html {
     font-size: 80%;
   }
+}
+
+@media (max-width: 768px) {
+  .book {
+    transform: scale(0.8);
+    transform-origin: center top;
+  }
+}
+
+@media (max-width: 1024px) {
+  .book { transform: scale(0.9); }
+}
+
+@media (max-width: 480px) {
+  .book { transform: scale(0.75); }
 }
