@@ -885,3 +885,11 @@ body::before{
   font-size: 13px;
   line-height: 1.9;
 }
+
+
+/* Mobile font scaling */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
